@@ -160,15 +160,6 @@ void loop() {
   long now = millis();
   if (now - lastMsg > timeBetweenMessages ) {
     lastMsg = now;
-//    String payload = "{\"currentMode\":";
-//    payload += currentMode;
-//    payload += ", \"movement\":";
-//    if (checked){
-//      payload += "true";
-//      } else {
-//        payload += "false"; 
-//        }
-    //payload += ", \"color\":";
     String payload = String(currentMode);
     payload += ",";
     if (checked){
