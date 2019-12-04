@@ -169,6 +169,7 @@ void setup() {
   strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();            // Turn OFF all pixels ASAP
 
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   Serial.println("");
 
@@ -383,6 +384,7 @@ void mode6(int wait) {
 }
 
 void loop() {
+  delay(100);
   server.handleClient();  //turns first LED to green!?
 
   switch (currentMode) {
